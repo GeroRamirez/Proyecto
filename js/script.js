@@ -1,5 +1,5 @@
 //Peliculas y valor disponibles
-const Peliculas = ["lilo y Stitch", "Mision Imposible", "Destino Final", "Dan da Dan: Evil Eye"];
+const Peliculas = ["Lilo y Stitch", "Misión Imposible", "Destino Final", "Dan da Dan: Evil Eye"];
 const Valor =[5000, 4500, 6000, 6500];
 
 //Mostrar Cartelera Disponible
@@ -21,37 +21,38 @@ function SeleccionarPelicula()  {
     
     while (CantidadEntradas) {
         MostrarPeliculas();
-        let Seleccionar = prompt("Ingrese el Número De La Pelicula: ");
+        let Seleccionar = prompt("Ingrese el Número de la Película: ");
         let index = parseInt(Seleccionar) - 1;
 
         if (index >= 0 && index < Peliculas.length){
             alert(`Has seleccionado: ${Peliculas[index]}`);
 
-            let Cantidad = prompt("¿Cuántas Entradas Quiere?: ");
+            let Cantidad = prompt("¿Cuántas Entradas Quieres?: ");
             Cantidad =parseInt(Cantidad);
 
             if (!isNaN(Cantidad)  && Cantidad > 0 ) {
                 Total += Valor[index] * Cantidad;
                    
             } else {
-                alert("Invalido");
+                alert("Opción no valida");
             }
         
                 
         } else{
-            alert("Error");
+            alert("Opción no valida");
         }
 
 
         CantidadEntradas = confirm("¿Desea agregar otra función?");
 
     }
-    alert(`Gracias por tu compra. Total a pagar: $${Total}`);
+    alert(`Total a pagar: $${Total}`);
+    alert(`Gracias por tu compra.` )
 }
 
 // Inciar la Venta de entradas
 function IniciarCompra() {
-    let Iniciar = confirm("¿Deseas ver una Pelicula?");
+    let Iniciar = confirm("¿Deseas ver una Película?");
     if (Iniciar) {
         SeleccionarPelicula();
     }   else {
