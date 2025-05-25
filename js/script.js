@@ -26,11 +26,24 @@ function SeleccionarPelicula()  {
 
         if (index >= 0 && index < Peliculas.length){
             alert(`Has seleccionado: ${Peliculas[index]}`);
-            Total += Valor[index];
-        }   else{
-                alert("Selección Inválida.");
+
+            let Cantidad = prompt("¿Cuántas Entradas Quiere?: ");
+            Cantidad =parseInt(Cantidad);
+
+            if (!isNaN(Cantidad)  && Cantidad > 0 ) {
+                Total += Valor[index] * Cantidad;
+                   
+            } else {
+                alert("Invalido");
+            }
+        
+                
+        } else{
+            alert("Error");
         }
-        CantidadEntradas = confirm("¿Deseas otra funsión?")
+
+
+        CantidadEntradas = confirm("¿Desea agregar otra función?");
 
     }
     alert(`Gracias por tu compra. Total a pagar: $${Total}`);
