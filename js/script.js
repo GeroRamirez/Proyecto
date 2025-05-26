@@ -25,7 +25,7 @@ function SeleccionarPelicula()  {
         let index = parseInt(Seleccionar) - 1;
 
         if (index >= 0 && index < Peliculas.length){
-            alert(`Has seleccionado: ${Peliculas[index]}`);
+            confirm(`Has seleccionado: ${Peliculas[index]}`);
 
             let Cantidad = prompt("¿Cuántas Entradas Quieres?: ");
             Cantidad =parseInt(Cantidad);
