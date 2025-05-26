@@ -12,7 +12,7 @@ function MostrarPeliculas() {
     alert(Cartelera)
 }
 
-// Seleccionar Pelicula 
+// Seleccionar Pelicula y cantidad de entradas
 function SeleccionarPelicula()  {
     let Total = 0;
     let CantidadEntradas =true;
